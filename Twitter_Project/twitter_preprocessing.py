@@ -33,8 +33,8 @@ def preprocess(queries):
         if doc == None:
             store_tweets(query)
             doc = db.tweets.find_one({"query": query})
-    for timeline_tweets in doc['user_tweets']:
-        documents.append(timeline_tweets)
+        for timeline_tweets in doc['user_tweets']:
+            documents.append(timeline_tweets)
 
     # documents = [tw['tweet_text'] for tw in db.tweets.find()
     #              if ('lang' in tw.keys()) and (tw['lang'] in ('en', 'und'))
