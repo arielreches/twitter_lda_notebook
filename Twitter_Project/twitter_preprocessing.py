@@ -26,18 +26,19 @@ def preprocess(queries):
 
     # Load documents and followers from db
     # Filter out non-english timelines and TL with less than 2 tweets
-    # documents    = [tw['tweet_text'] for tw in db.tweets.find()
-    #                     if ('lang' in tw.keys()) and (tw['lang'] in ('en','und'))
-    #                         and ('count' in tw.keys()) and (tw['count'] > 2) ]
+
     documents = []
     for query in queries:
         doc = db.tweets.find_one({"query": query})
         if doc == None:
             store_tweets(query)
             doc = db.tweets.find_one({"query": query})
-        documents.append(doc['all_tweets'])
+    for timeline_tweets in doc['user_tweets']:
+        documents.append(timeline_tweets)
 
-
+    # documents = [tw['tweet_text'] for tw in db.tweets.find()
+    #              if ('lang' in tw.keys()) and (tw['lang'] in ('en', 'und'))
+    #              and ('count' in tw.keys()) and (tw['count'] > 2)]
 
 
     #  Filter non english documents
@@ -111,8 +112,14 @@ def preprocess(queries):
     # Build the corpus: vectors with occurence of each word for each document
     # convert tokenized documents to vectors
     corpus = [dictionary.doc2bow(doc) for doc in documents]
+    for i,doc in enumerate(corpus):
+        doc.sort(key=lambda tup: tup[1])
+        for z in range (len(doc),len(doc)-10, -1 ):
 
-    # and save in Market Matrix format
+            print(i,z, dictionary.get(doc[z-1][0]), doc[z-1][1])
+
+
+        # and save in Market Matrix format
     # corpora.MmCorpus.serialize(''.join(queries) + '_corpus.mm', corpus)
     return corpus, dictionary
-    # this corpus can be loaded with corpus = corpora.MmCorpus('alexip_followers.mm')
+        # this corpus can be loaded with corpus = corpora.MmCorpus('alexip_followers.mm')
