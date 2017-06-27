@@ -18,23 +18,26 @@ def store_tweets(query):
     # get tweets from query and put in db
     count = 100
     tweet_data = twitter.search(q=query, count=count, lang="en")['statuses']
-    doc = db.tweets.find_one({"query": query})
     tweet_text = ""
-    user_tweets = []
+    id_tweet_map = []
+    doc = db.tweets.find_one({"query": query})
     for idx, tw in enumerate(tweet_data):
+        tweet_data[idx]['timeline_array'] = []
         user_text = ""
         tweet_text = tweet_text + tw['text'] + " "
         user_timeline = (twitter.get_user_timeline(screen_name=tw['user']['screen_name'], count=50, trim_user=True))
         for u_tw in user_timeline:
             if u_tw['lang'] in ("en", "und"):
                 user_text = user_text + " " + u_tw['text']
-        user_tweets.append(user_text)
+                id_tweet_map.append((u_tw['text'], u_tw['id_str']))
+                tweet_data[idx]['timeline_array'].append((u_tw['text'], u_tw['id_str']))
+        tweet_data[idx]['timeline'] = user_text
     if doc == None:
         # TODO use langid to further refine english
 
 
         # Generate document from Tweets and store
-        doc = {"count": len(tweet_data), "query": query, "tweet_data": tweet_data, "tweet_text": tweet_text, "user_tweets": user_tweets}
+        doc = {"count": len(tweet_data), "query": query, "tweet_data": tweet_data, "tweet_text": tweet_text, "id_tweet_map": id_tweet_map}
         tw_collection = db.tweets
         tw_collection.insert_one(doc)
     else:
@@ -42,9 +45,10 @@ def store_tweets(query):
 
         db.tweets.update_one(
             {"query": query},
-            {"$set": {"count":  doc['count'] + len(tweet_data), "tweet_text": doc['tweet_text'] + tweet_text, "tweet_data": doc['tweet_data'] + tweet_data, "user_tweets": doc['user_tweets'] + user_tweets}, "$currentDate": {"lastModified": True}})
+            {"$set": {"count":  doc['count'] + len(tweet_data), "tweet_text": doc['tweet_text'] + tweet_text, "tweet_data": doc['tweet_data'] + tweet_data, "id_tweet_map": doc['id_tweet_map'] + id_tweet_map}, "$currentDate": {"lastModified": True}})
 
 
+store_tweets("Israel")
 # def combine_tweets():
 #     docs = db.tweets.find()
 #     for d in docs:

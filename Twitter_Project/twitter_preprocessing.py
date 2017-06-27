@@ -50,7 +50,7 @@ def preprocess(queries):
                     for doc in documents ]
 
     # Remove documents with less 100 words (some timeline are only composed of URLs)
-    documents = [doc for doc in documents if len(doc) > 100]
+
 
     # tokenize
     from nltk.tokenize import RegexpTokenizer
@@ -97,6 +97,9 @@ def preprocess(queries):
     documents = [ [token for token in doc if token_frequency[token] > 1]
                     for doc in documents  ]
 
+    documents = [doc for doc in documents if len(doc) > 100]
+
+
     # Sort words in documents
     for doc in documents:
         doc.sort()
@@ -114,7 +117,8 @@ def preprocess(queries):
     corpus = [dictionary.doc2bow(doc) for doc in documents]
     for i,doc in enumerate(corpus):
         doc.sort(key=lambda tup: tup[1])
-        for z in range (len(doc),len(doc)-10, -1 ):
+        print("len", len(doc), i)
+        for z in range (len(doc),len(doc)-5, -1 ):
 
             print(i,z, dictionary.get(doc[z-1][0]), doc[z-1][1])
 
