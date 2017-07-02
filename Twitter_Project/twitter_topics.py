@@ -1,5 +1,6 @@
 from twython import Twython
 from pymongo import MongoClient
+from twitter_preprocessing_2 import preprocess
 
 
 TWITTER_CONSUMER_KEY="1ILswlPvjdonAAv3WfSf3jMAQ"
@@ -33,7 +34,6 @@ def store_tweets(query):
                 tweet_data[idx]['timeline_array'].append((u_tw['text'], u_tw['id_str']))
         tweet_data[idx]['timeline'] = user_text
     if doc == None:
-        # TODO use langid to further refine english
 
 
         # Generate document from Tweets and store
@@ -48,7 +48,8 @@ def store_tweets(query):
             {"$set": {"count":  doc['count'] + len(tweet_data), "tweet_text": doc['tweet_text'] + tweet_text, "tweet_data": doc['tweet_data'] + tweet_data, "id_tweet_map": doc['id_tweet_map'] + id_tweet_map}, "$currentDate": {"lastModified": True}})
 
 
-store_tweets("Israel")
+store_tweets("forrest gump")
+preprocess("forrest gump")
 # def combine_tweets():
 #     docs = db.tweets.find()
 #     for d in docs:

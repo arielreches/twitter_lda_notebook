@@ -39,7 +39,7 @@ from string import digits
     #  Database functions
     # --------------------------------------
 def preprocess(query):
-    query = "Israel"
+    print("query is :" + query)
     def connect():
         client = MongoClient()
         return client['myproject']
