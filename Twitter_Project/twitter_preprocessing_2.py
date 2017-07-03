@@ -49,20 +49,18 @@ def preprocess(query):
         tweets = db.tweets.find_one({'query': query})
         return tweets['tweet_data']
 
-    def filter_by_length_and_lang(percent = 5, lang = ['en','und']):
+    def filter_by_length_and_lang(percent, lang):
         # tweets.rewind()
         # exclude 25% of documents with little content
-        len_text = [ len(tw['timeline'])  for tw in tweets
-                        if 'timeline' in tw.keys() and len(tw['timeline']) > 0 ]
+        len_text = [ len(tweets[tw]['timeline'])  for tw in tweets
+                        if 'timeline' in tweets[tw].keys() and len(tweets[tw]['timeline']) > 0 ]
         threshold  = np.percentile(len_text , percent)
 
         # tweets.rewind()
         # filter on lang and
-        documents = [{ 'user_id': tw['user']['id'], 'text': tw['timeline'], 'text_array': tw['timeline_array']}
+        documents = [{ 'user_id': tw, 'text': tweets[tw]['timeline'], 'text_array': tweets[tw]['timeline_array']}
                         for tw in tweets
-                        if ('lang' in tw.keys())
-                            and (tw['lang'] in lang)
-                            and (len(tw['timeline']) > threshold)
+                        if ( (len(tweets[tw]['timeline']) > threshold))
                     ]
         # Keep documents in English or Undefined lang and with enough content
         print ("this_many_docs", len(documents))
@@ -76,9 +74,15 @@ def preprocess(query):
         text = re.sub(r"(?:\@|http?\://)\S+", "", text)
         text = re.sub(r"(?:\@|https?\://)\S+", "", text)
         return text
+    def remove_urls_array(arr):
+        for t in arr:
+            t[0] = re.sub(r"(?:\@|http?\://)\S+", "", t[0])
+            t[0] = re.sub(r"(?:\@|https?\://)\S+", "", t[0])
+        return arr
+
 
     def doc_rm_urls():
-        return [ { 'user_id': doc['user_id'], 'text': remove_urls(doc['text']), 'text_array': doc['text_array'] }
+        return [ { 'user_id': doc['user_id'], 'text': remove_urls(doc['text']), 'text_array': remove_urls_array(doc['text_array']) }
                     for doc in documents ]
 
     def stop_words_list():
@@ -93,7 +97,7 @@ def preprocess(query):
                 'new','use','should','could','really','see','want','nice',
                 'while','know','free','today','day','always','last','put','live',
                 'week','went','wasn','was','used','ugh','try','kind', 'http','much',
-                'need', 'next','app','ibm','appleevent','using', 'https']
+                'need', 'next','app','ibm','appleevent','using', 'RT', 'https']
 
     def all_stopwords():
         '''
@@ -239,8 +243,8 @@ def preprocess(query):
     tokenized_documents = keep_best_tokens()
 
     # for visualization purposes only
-    for doc in tokenized_documents:
-        doc['tokens'].sort()
+    # for doc in tokenized_documents:
+    #     doc['tokens'].sort()
     # ---------------------------------------------------------
     #  Save tokenized docs in database
     # ---------------------------------------------------------
@@ -248,15 +252,15 @@ def preprocess(query):
     tweets = db.tweets.find_one({"query": query})
     tweet_data = tweets['tweet_data']
     token_id_map = [[], []]
-    for idx,twt in enumerate(tweets['tweet_data']):
+    for idx,usr in enumerate(tweets['tweet_data']):
         docs = [doc for doc in tokenized_documents
-                    if doc['user_id'] == twt['user']['id']]
+                    if doc['user_id'] == usr]
         if len(docs) == 1:
             # update existing document with tokens
-            tweet_data[idx]['tokens'] = docs[0]['tokens']
-            tweet_data[idx]['tweet_ids'] = docs[0]['tweet_ids']
-            tweet_data[idx]['has_tokens'] = True
-            tweet_data[idx]['len_tokens'] = len(docs[0]['tokens'])
+            tweet_data[usr]['tokens'] = docs[0]['tokens']
+            tweet_data[usr]['tweet_ids'] = docs[0]['tweet_ids']
+            tweet_data[usr]['has_tokens'] = True
+            tweet_data[usr]['len_tokens'] = len(docs[0]['tokens'])
             token_id_map[0] = token_id_map[0] + docs[0]['tokens']
             token_id_map[1] = token_id_map[1] + docs[0]['tweet_ids']
 
@@ -264,17 +268,17 @@ def preprocess(query):
 
         else:
             # the document was not tokenized, update the record accordingly
-            tweet_data[idx]['tweet_ids'] = ''
-            tweet_data[idx]['tokens'] = ''
-            tweet_data[idx]['has_tokens'] = False
-            tweet_data[idx]['len_tokens'] = 0
+            tweet_data[usr]['tweet_ids'] = ''
+            tweet_data[usr]['tokens'] = ''
+            tweet_data[usr]['has_tokens'] = False
+            tweet_data[usr]['len_tokens'] = 0
 
 
-        update = {'tweet_data': tweet_data, 'token_id_map': (zip(token_id_map[0], token_id_map[1]))}
+    update = {'tweet_data': tweet_data, 'token_id_map': (zip(token_id_map[0], token_id_map[1]))}
         # update the record
-        res = db.tweets.update_one({"query": query},
-            { "$set":update }
-        )
+    res = db.tweets.update_one({"query": query},
+        { "$set":update }
+    )
 
         # if res.matched_count != 1:
         #     print("unable to update record: ",
@@ -318,3 +322,4 @@ def preprocess(query):
     #         print(i, z, dictionary.get(doc[z - 1][0]), doc[z - 1][1])
 
     return corpus, dictionary
+preprocess("Elon Musk")

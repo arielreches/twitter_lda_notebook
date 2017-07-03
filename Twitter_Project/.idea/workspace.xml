@@ -23,10 +23,11 @@
       <file leaf-file-name="twitter_topics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter_topics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="-578">
+              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+                <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
               </folding>
             </state>
           </provider>
@@ -35,22 +36,10 @@
       <file leaf-file-name="twitter_preprocessing_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter_preprocessing_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1085">
-              <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="21" />
+            <state relative-caret-position="3911">
+              <caret line="324" column="21" lean-forward="false" selection-start-line="324" selection-start-column="21" selection-end-line="324" selection-end-column="21" />
               <folding>
                 <element signature="e#1238#1275#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LSA.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LSA.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
-              <folding>
-                <element signature="e#854#885#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,10 +48,11 @@
       <file leaf-file-name="ldavis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ldavis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="-79">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
                 <element signature="e#1#49#0" expanded="true" />
+                <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,8 +61,8 @@
       <file leaf-file-name="tweets.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tweets.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35018">
-              <caret line="4623" column="0" lean-forward="false" selection-start-line="4623" selection-start-column="0" selection-end-line="4623" selection-end-column="0" />
+            <state relative-caret-position="116">
+              <caret line="10752" column="69" lean-forward="false" selection-start-line="10752" selection-start-column="63" selection-end-line="10752" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -89,12 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heyman</find>
-      <find>paul</find>
-      <find>connect(</find>
-      <find>Israel</find>
-      <find>dictionary =</find>
-      <find>connect</find>
       <find>lithiu</find>
       <find>trends</find>
       <find>trend</find>
@@ -114,11 +98,17 @@
       <find>interi</find>
       <find>atheist</find>
       <find>the1v</find>
-      <find>plot_cl</find>
       <find>chesspia</find>
       <find>&quot;this_</find>
       <find>isis</find>
       <find>10 inspir</find>
+      <find>@</find>
+      <find>plot_cl</find>
+      <find>stoplist</find>
+      <find>RT</find>
+      <find>get_t</find>
+      <find>strict</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -128,6 +118,7 @@
         <option value="$PROJECT_DIR$/twitter_preprocessing.py" />
         <option value="$PROJECT_DIR$/.idea/twitter_preprocess_2.py" />
         <option value="$PROJECT_DIR$/LSA.py" />
+        <option value="$PROJECT_DIR$/retest.py" />
         <option value="$PROJECT_DIR$/twitter_preprocessing_2.py" />
         <option value="$PROJECT_DIR$/ldavis.py" />
         <option value="$PROJECT_DIR$/twitter_topics.py" />
@@ -135,8 +126,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -174,7 +167,6 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,24 +181,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.twitter_topics">
-    <configuration default="false" name="twitter_preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Twitter_Project" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/twitter_preprocessing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="twitter_preprocessing_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,6 +248,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Twitter_Project" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/twitter_topics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="retest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Twitter_Project" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/retest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -376,19 +368,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.twitter_preprocessing" />
-      <item index="1" class="java.lang.String" itemvalue="Python.twitter_preprocessing_2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.ldavis" />
-      <item index="3" class="java.lang.String" itemvalue="Python.LSA" />
-      <item index="4" class="java.lang.String" itemvalue="Python.twitter_topics" />
+      <item index="0" class="java.lang.String" itemvalue="Python.twitter_preprocessing_2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ldavis" />
+      <item index="2" class="java.lang.String" itemvalue="Python.LSA" />
+      <item index="3" class="java.lang.String" itemvalue="Python.twitter_topics" />
+      <item index="4" class="java.lang.String" itemvalue="Python.retest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.twitter_topics" />
         <item index="1" class="java.lang.String" itemvalue="Python.ldavis" />
         <item index="2" class="java.lang.String" itemvalue="Python.twitter_preprocessing_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LSA" />
-        <item index="4" class="java.lang.String" itemvalue="Python.twitter_preprocessing" />
+        <item index="3" class="java.lang.String" itemvalue="Python.retest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LSA" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -428,18 +420,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="23" width="1280" height="709" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0013280213" sideWeight="0.128125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.499336" sideWeight="0.871875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359375" sideWeight="0.871875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5936255" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5921875" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -490,7 +481,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -505,6 +496,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
           </folding>
         </state>
       </provider>
@@ -525,6 +517,7 @@
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#1#49#0" expanded="true" />
+            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
           </folding>
         </state>
       </provider>
@@ -535,6 +528,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
           </folding>
         </state>
       </provider>
@@ -555,6 +549,7 @@
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
             <element signature="e#1#49#0" expanded="true" />
+            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
           </folding>
         </state>
       </provider>
@@ -565,6 +560,7 @@
           <caret line="2" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,6 +571,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="15" />
           <folding>
             <element signature="e#1#49#0" expanded="true" />
+            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
           </folding>
         </state>
       </provider>
@@ -595,6 +592,7 @@
           <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
           </folding>
         </state>
       </provider>
@@ -658,50 +656,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/retest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#16#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LSA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="410">
           <caret line="151" column="40" lean-forward="true" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
           <folding>
-            <element signature="e#854#885#0" expanded="true" />
+            <element signature="e#854#885#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pymongo/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="551" column="0" lean-forward="false" selection-start-line="551" selection-start-column="0" selection-end-line="551" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="561" column="0" lean-forward="false" selection-start-line="561" selection-start-column="0" selection-end-line="561" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tweets.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="10752" column="69" lean-forward="false" selection-start-line="10752" selection-start-column="63" selection-end-line="10752" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_preprocessing_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1085">
-          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="21" />
+        <state relative-caret-position="3911">
+          <caret line="324" column="21" lean-forward="false" selection-start-line="324" selection-start-column="21" selection-end-line="324" selection-end-column="21" />
           <folding>
             <element signature="e#1238#1275#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tweets.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35018">
-          <caret line="4623" column="0" lean-forward="false" selection-start-line="4623" selection-start-column="0" selection-end-line="4623" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ldavis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="-79">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="e#1#49#0" expanded="true" />
+            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_topics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="-578">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
           </folding>
         </state>
       </provider>
