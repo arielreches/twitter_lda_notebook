@@ -23,11 +23,11 @@
       <file leaf-file-name="twitter_topics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter_topics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-578">
-              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="-391">
+              <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
-                <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+                <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
               </folding>
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="twitter_preprocessing_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter_preprocessing_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3911">
-              <caret line="324" column="21" lean-forward="false" selection-start-line="324" selection-start-column="21" selection-end-line="324" selection-end-column="21" />
+            <state relative-caret-position="150">
+              <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding>
                 <element signature="e#1238#1275#0" expanded="true" />
               </folding>
@@ -48,12 +48,22 @@
       <file leaf-file-name="ldavis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ldavis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="339">
+              <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
               <folding>
-                <element signature="e#1#49#0" expanded="true" />
-                <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
+                <element signature="e#1#56#0" expanded="true" />
+                <marker date="1499262617000" expanded="true" signature="284:650" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gensim.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pyLDAvis/gensim.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lithiu</find>
-      <find>trends</find>
       <find>trend</find>
       <find>understand</find>
       <find>haden</find>
@@ -109,6 +117,8 @@
       <find>get_t</find>
       <find>strict</find>
       <find>print</find>
+      <find>stem</find>
+      <find>viz()</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -421,16 +431,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0013280213" sideWeight="0.128125" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359375" sideWeight="0.871875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.128125" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.871875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5921875" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -446,19 +457,20 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0013280213" sideWeight="0.128125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905483" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.359375" sideWeight="0.871875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.242569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5921875" sideWeight="0.496875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -481,7 +493,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -496,7 +508,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+            <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -516,8 +528,8 @@
         <state relative-caret-position="26">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#1#49#0" expanded="true" />
-            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
+            <element signature="e#1#56#0" expanded="true" />
+            <marker date="1499262617000" expanded="true" signature="284:650" ph="..." />
           </folding>
         </state>
       </provider>
@@ -528,7 +540,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+            <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -548,8 +560,8 @@
         <state relative-caret-position="78">
           <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
-            <element signature="e#1#49#0" expanded="true" />
-            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
+            <element signature="e#1#56#0" expanded="true" />
+            <marker date="1499262617000" expanded="true" signature="284:650" ph="..." />
           </folding>
         </state>
       </provider>
@@ -560,7 +572,7 @@
           <caret line="2" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+            <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -570,8 +582,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="15" />
           <folding>
-            <element signature="e#1#49#0" expanded="true" />
-            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
+            <element signature="e#1#56#0" expanded="true" />
+            <marker date="1499262617000" expanded="true" signature="284:650" ph="..." />
           </folding>
         </state>
       </provider>
@@ -592,7 +604,7 @@
           <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+            <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
           </folding>
         </state>
       </provider>
@@ -702,32 +714,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_preprocessing_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3911">
-          <caret line="324" column="21" lean-forward="false" selection-start-line="324" selection-start-column="21" selection-end-line="324" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding>
             <element signature="e#1238#1275#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pyLDAvis/gensim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ldavis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="339">
+          <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
           <folding>
-            <element signature="e#1#49#0" expanded="true" />
-            <marker date="1499093314000" expanded="true" signature="258:624" ph="..." />
+            <element signature="e#1#56#0" expanded="true" />
+            <marker date="1499262617000" expanded="true" signature="284:650" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_topics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="-391">
+          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1499093934000" expanded="true" signature="2991:4634" ph="..." />
+            <marker date="1499265731000" expanded="true" signature="3153:4796" ph="..." />
           </folding>
         </state>
       </provider>

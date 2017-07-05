@@ -34,6 +34,7 @@ from gensim import corpora
 from optparse import OptionParser
 from pymongo import MongoClient
 from string import digits
+from nltk.stem.porter import *
 
     # --------------------------------------
     #  Database functions
@@ -139,6 +140,7 @@ def preprocess(query):
             for tweet in doc['text_array']:
                 t_tokens = tokenizer.tokenize((tweet[0].lower()))
                 for t in t_tokens:
+
                     tokens.append(t)
                     ids.append(tweet[1])
             new_docs.append(
@@ -174,11 +176,13 @@ def preprocess(query):
                             and token_frequency[token] > 1)
 
     def keep_best_tokens():
+        stemmer = PorterStemmer()
+
         '''
             Removes all tokens that do not satistify a certain condition
         '''
         return [   {  'user_id': doc['user_id'],
-                       'tokens': [ token for token in doc['tokens']
+                       'tokens': [ stemmer.stem(token) for token in doc['tokens']
                                     if token_condition(token) ],
                       'tweet_ids': [ id for i, id in enumerate(doc['tweet_ids'])
                                     if token_condition(doc['tokens'][i])]
@@ -322,4 +326,4 @@ def preprocess(query):
     #         print(i, z, dictionary.get(doc[z - 1][0]), doc[z - 1][1])
 
     return corpus, dictionary
-preprocess("Elon Musk")
+preprocess("GoPro")

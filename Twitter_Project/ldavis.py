@@ -1,6 +1,7 @@
 
-from gensim import corpora, models, similarities
+from gensim import corpora, models, similarities, utils
 import pyLDAvis.gensim
+import numpy as np
 import sys
 import warnings
 from pymongo import MongoClient
@@ -49,29 +50,42 @@ def viz():
     pyLDAvis.show(data=d)
 
 def get_categories():
-    print(lda.show_topics())
+    # print(lda.show_topics(formatted=False)[0][1])
+    # scores = [score[1] for score in lda.show_topics(formatted=False)]
+    arrs = []
+    for topic in lda.show_topics(formatted=False):
+        scores = [tup[1] for tup in topic[1]]
+        normal = np.linalg.norm(scores, ord=1)
+        print(normal)
+
+        normalized_topic = map(lambda tup: (tup[0], (tup[1]/normal)*100), topic[1])
+        arrs.append(normalized_topic)
+    print(arrs)
     print("TOP TOPICS")
     print(lda.top_topics(corpus, 10))
 
 
 
 if __name__ == "__main__":
+    warnings.simplefilter("ignore")
+
     # parser = argparse.ArgumentParser()
     # parser.add_argument("-q", "--query",
     #                     help="specify query")
     # args = parser.parse_args()
     db = connect()
-    # print("is it connecting?")
     #
-    corpus, dictionary = get_dictionary_corpus("Elon Musk")
+    corpus, dictionary = get_dictionary_corpus("GoPro")
     # print("new_preprocess")
     #
     # corpus, dictionary = preprocess("Coachella")
     # print("preprocessed")
     lda = models.LdaModel(corpus, id2word=dictionary, num_topics=10, passes=20, alpha=.001)
-    warnings.simplefilter("ignore")
+    # lda = models.LdaModel.load("ldamodel")
     get_categories()
-    get_tweets("Elon Musk", ["strictlybidness"])
+    #
+    # get_categories()
+    # get_tweets("GoPro", ["incredibleindia"])
 
     viz()
 
