@@ -1,5 +1,6 @@
 from twython import Twython
 from pymongo import MongoClient
+import copy
 
 
 TWITTER_CONSUMER_KEY="1ILswlPvjdonAAv3WfSf3jMAQ"
@@ -21,7 +22,9 @@ query = "Trump"
 def get_unique_users(init_max_id, initial_accounts):
     global unique_accounts
     global final_max_id
-    accounts = initial_accounts
+    accounts = copy.copy(initial_accounts)
+    print("initial accounts b4" , len(accounts))
+
     max_id = init_max_id
     for i in range(0, 10):
         count = 30
@@ -45,7 +48,6 @@ if doc == None:
 else:
     init_max_id = doc['max_id']
     initial_accounts = doc['unique_accounts']
-print(len(initial_accounts))
 get_unique_users(init_max_id, initial_accounts)
 print "added accounts", len(unique_accounts)
 

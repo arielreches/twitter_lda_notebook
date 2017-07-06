@@ -1,11 +1,9 @@
 
-from gensim import corpora, models, similarities, utils
+from gensim import corpora, models
 import pyLDAvis.gensim
 import numpy as np
-import sys
 import warnings
 from pymongo import MongoClient
-import argparse
 
 
 
@@ -35,9 +33,10 @@ def get_tweets(query, tokens):
 
 
 def get_dictionary_corpus(query):
+    db = MongoClient()['myproject']
+
     users =  db.tweets.find_one({'query': query})['tweet_data']
     dic = corpora.Dictionary([users[user]['tokens'] for user in users if users[user]['has_tokens']])
-    print("new school", len(dic))
     corpus = [ dic.doc2bow(users[user]['tokens']) for user in users if users[user]['has_tokens']]
     return corpus, dic
 
@@ -67,13 +66,14 @@ def get_categories():
 
 
 if __name__ == "__main__":
+    db = connect()
+
     warnings.simplefilter("ignore")
 
     # parser = argparse.ArgumentParser()
     # parser.add_argument("-q", "--query",
     #                     help="specify query")
     # args = parser.parse_args()
-    db = connect()
     #
     corpus, dictionary = get_dictionary_corpus("GoPro")
     # print("new_preprocess")
@@ -88,6 +88,7 @@ if __name__ == "__main__":
     # get_tweets("GoPro", ["incredibleindia"])
 
     viz()
+
 
 
 

@@ -326,4 +326,4 @@ def preprocess(query):
     #         print(i, z, dictionary.get(doc[z - 1][0]), doc[z - 1][1])
 
     return corpus, dictionary
-preprocess("GoPro")
+preprocess("Trump")
